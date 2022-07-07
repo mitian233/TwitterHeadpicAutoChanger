@@ -27,7 +27,7 @@ ACCESS_TOKEN_SECRET = access_token_secret
 
 def last_headpic():
     if not os.path.exists("last_headpic.json"):
-        writeToFile(0)
+        writeToFile(1)
     with open("last_headpic.json", "r") as f:
         jsdict = json.load(f)
         last_headpic = jsdict["last_headpic"]
