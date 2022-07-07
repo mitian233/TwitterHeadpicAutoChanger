@@ -55,12 +55,6 @@ def job():
     auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
     auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
     api = tweepy.API(auth)
-    '''
-    public_tweets = api.home_timeline(trim_user='ture')
-    for tweet in public_tweets:
-        print(
-            'Status id:\033[92m' + tweet.id_str + '\033[0m\n@' + tweet.user.screen_name + ':\n' + tweet.text + '\n===============')
-    '''
     current = os.getcwd()
     os.chdir("headpics/")
     filename = str(picNumber) + ".jpg"
